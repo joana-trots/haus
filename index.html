@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хаус - Агентство недвижимости</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="./js/emailjs.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img class="logo-img" src="./images/logo-haus-black.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">О нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#careers">Карьера в HAUS</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="#contact--form">Консультация</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contacts">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <main class="main">
+
+            <section class="hero">
+                 <div class="container">
+                    <div class="hero__info row">
+                        <div class="hero__subnav col-lg-4 col-sm-12">
+                            <p class="hero__subnav--title">Спецпредложение</p>
+                            <p class="hero__subnav--link">
+                                <a href="#" title="Специальное предложение">До конца июля реклама для собственников за счет фирмы</a>
+                            </p>
+                        </div>
+                        <div class="hero__text col-lg-8 col-sm-12">
+                            <h1>HAUS — лучший выбор недвижимости в Минске</h1>
+                            <p class="par">Продажа и&nbsp;аренда недвижимости: квартиры, дома, участки, склады, офисы, парковочные
+                                места, торговые и&nbsp;производственные помещения. Мы&nbsp;работаем в&nbsp;Республике
+                                Беларусь и&nbsp;за&nbsp;рубежом.</p>
+
+                            <a class="btn btn-cta d-md-none d-inline-block" href="#contact--form">Получить консультацию</a>
+
+                            <div class="hero__form d-none d-md-block" id="short-form">
+                                <h5>Оставьте ваши данные, чтобы получить бесплатную консультацию</h5>
+                                <form class="align-items-center" id="hero-form">
+                                    <div class="form-field">
+                                      <label class="sr-only" for="service">Выберите услугу</label>
+                                      <div class="select">
+                                        <select name="service" id="service" required>
+                                          <option value="" selected disabled>Выберите услугу</option>
+                                          <option value="rent-out-apt">Сдать квартиру</option>
+                                          <option value="rent-apt">Снять квартиру</option>
+                                          <option value="sel-apt">Продать квартиру</option>
+                                          <option value="buy-apt">Купить квартиру</option>
+                                          <option value="consultation">Консультация</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-field">
+                                        <label class="sr-only" for="name">Ваше имя</label>
+                                        <input type="text" id="name" name="name" placeholder="Ваше имя" minlength="2" required>
+                                    </div>
+                                    <div class="form-field">
+                                      <label class="sr-only" for="phone">Телефон</label>
+                                      <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                                    </div>
+                                    <button class="btn btn-arrow btn-round" type="submit"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero__slider" id="services">
+                        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+                            
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <div class="container">
+                                  <div class="caption">
+                                    <h5>Ваша недвижимость, наша забота. Сдавайте с&nbsp;уверенностью!</h5>
+                                    <p class="caption__description">Сдайте свою недвижимость без хлопот и максимизируйте ее доходность.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div class="container">
+                                  <div class="caption">
+                                    <h5>Уют и&nbsp;комфорт на&nbsp;аренду. Найдите свой идеальный дом с&nbsp;нами!</h5>
+                                    <p class="caption__description">Найдите идеальное жилье для аренды, отвечающее вашим потребностям и предпочтениям.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div class="container">
+                                  <div class="caption">
+                                    <h5>Воплощаем мечты в&nbsp;реальность. Покупайте с&nbsp;нами!</h5>
+                                    <p class="caption__description">Приобретайте свою мечту - квартиру, дом, дачу или коммерческую недвижимость.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div class="container">
+                                  <div class="caption">
+                                    <h5>Максимизируйте вашу выгоду. Продавайте с&nbsp;умом!</h5>
+                                    <p class="caption__description">Реализуйте вашу недвижимость по лучшей цене и с минимальными затратами.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div class="container">
+                                  <div class="caption">
+                                    <h5>Умные решения для успешной аренды. Задавайте вопросы, мы&nbsp;на&nbsp;связи!</h5>
+                                    <p class="caption__description">Обратитесь за профессиональной консультацией по аренде недвижимости и получите ответы на все ваши вопросы.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div class="container">
+                                  <div class="caption">
+                                    <h5>Мощные советы для успешной продажи. Доверьтесь нашему опыту!</h5>
+                                    <p class="caption__description">Получите экспертную консультацию по продаже вашей недвижимости и принимайте взвешенные решения.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="carousel-controls">
+                              <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                            </div>
+                            
+                          </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="intro">
+              <div class="container">
+                <div class="intro__inner row">
+                  <h2 class="offset-md-1 col-lg-8 col-md-9 col-sm-12">Агентство недвижимости HAUS Estate&nbsp;&mdash; это команда крутых специалистов, которые любят свое дело, всегда готовы помочь в&nbsp;<span>решении вопросов с&nbsp;недвижимостью</span> и&nbsp;сделают свою работу идеально.</h2>
+                </div>
+              </div>
+            </section>
+
+            <section class="about" id="about">
+              <div class="container">
+                <div class="about__inner row justify-content-between align-items-center">
+                  <div class="about__text offset-md-1 col-md-7 col-sm-12 order-sm-last order-md-1">
+                    <h3>О нас</h3>
+                    <p class="par">Мы&nbsp;предлагаем полный спектр услуг в&nbsp;сфере недвижимости. Если вам требуется продать или приобрести квартиру, дом, дачу, участок или офис, снять или сдать <span>жилую или коммерческую недвижимость</span>, или вам необходима юридическая консультация по&nbsp;сделкам с&nbsp;недвижимостью, <span>наши специалисты всегда готовы помочь!</span></p>
+                    <p class="par">Мы&nbsp;предоставляем риэлтерские услуги как на&nbsp;первичном, так и&nbsp;на&nbsp;вторичном рынке недвижимости, работая с&nbsp;объектами как жилого, так и&nbsp;коммерческого назначения. Наши профессионалы и&nbsp;партнеры имеют опыт работы в&nbsp;различных странах, включая <span>Беларусь, Россию, Казахстан, Грузию, Тайланд, Северный Кипр и&nbsp;Дубай</span>, а&nbsp;также осуществляем деятельность по&nbsp;объектам в&nbsp;других регионах Беларуси.</p>
+                  </div>
+                  <div class="about__image col-md-4 col-sm-12 order-sm-first order-md-2">
+                    <img src="./images/about-kv.jpg" alt="key visual">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="benefits" id="benefits">
+              <div class="container-fluid">
+                <div class="benefits__inner container">
+                  <div class="row offset-md-1">
+                    <div class="col-11">
+                      <div class="row justify-content-between">
+                        <div class="benefits__item col-sm-6 col-lg-4">
+                          <h3 class="vertical">1</h3>
+                          <p>Ни&nbsp;одна наша сделка не&nbsp;признана не&nbsp;действительной</p>
+                        </div>
+                        <div class="benefits__item col-sm-6 col-lg-4">
+                          <h3 class="vertical">2</h3>
+                          <p>Продаем новостройки по цене застройщика</p>
+                        </div>
+                        <div class="benefits__item col-sm-6 col-lg-4">
+                          <h3 class="vertical">3</h3>
+                          <p>Все наши сделки застрахованы</p>
+                      </div>
+                    
+                      <div class="benefits__item col-sm-6 col-lg-4">
+                        <h3 class="vertical">4</h3>
+                        <p>Сотрудничаем с&nbsp;крупными банками, сопровождаем кредитные сделки</p>
+                      </div>
+                      <div class="benefits__item col-sm-6 col-lg-4">
+                        <h3 class="vertical">5</h3>
+                        <p>Со&nbsp;своими клиентами работаем по&nbsp;официальному договору</p>
+                      </div>
+                      <div class="benefits__item col-sm-6 col-lg-4">
+                        <h3 class="vertical">6</h3>
+                        <p>Мы&nbsp;сотрудничаем с&nbsp;застройщиками</p>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <section class="why-us" id="why-us">
+              <div class="container-fluid">
+                <div class="why-us__inner row">
+                  <div class="why-us__image col-md-5 col-sm-12"></div>
+                  <div class="why-us__text offset-md-1 col-md-6 col-sm-12">
+                    <h3>Почему стоит выбрать наше агентство</h3>
+                    <p class="par">Центр недвижимости <span>HAUS Estate</span> в Минске предоставляет квалифицированную помощь как покупателям, так и продавцам, а также застройщикам. Подобные услуги могут понадобиться:</p>
+                    <div class="why-us__items">
+                      <div class="why-us__item">
+                        <div class="why-us__item--icon">
+                          <img src="./images/icons/icon-1.svg" alt="key visual icon">
+                        </div>
+                        <div>
+                          <p class="why-us__item--title">Использование рекламного&nbsp;подхода</p>
+                          <p class="why-us__item--description">Представители агентства занимаются размещением объявления о&nbsp;продаже, проводят переговоры с&nbsp;потенциальными клиентами, показывают квадратные метры покупателю.</p>
+                        </div>
+                      </div>
+  
+                      <div class="why-us__item">
+                        <div class="why-us__item--icon">
+                          <img src="./images/icons/icon-2.svg" alt="key visual icon">
+                        </div>
+                        <div>
+                          <p class="why-us__item--title">Своевременная и правильная подготовка документов</p>
+                          <p class="why-us__item--description">Любая сделка по&nbsp;продаже требует сбора пакета правильно оформленной и&nbsp;своевременно зарегистрированной в&nbsp;различных инстанциях документации.</p>
+                        </div>
+                      </div>
+  
+                      <div class="why-us__item">
+                        <div class="why-us__item--icon">
+                          <img src="./images/icons/icon-3.svg" alt="key visual icon">
+                        </div>
+                        <div>
+                          <p class="why-us__item--title">Проверка квартиры на&nbsp;юридическую чистоту</p>
+                          <p class="why-us__item--description">Потребуется в&nbsp;случае продажи с&nbsp;альтернативой, что защитит от&nbsp;неприятных сюрпризов после покупки жилья.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </section>
+
+
+            <section class="steps" id="steps">
+              <div class="container">
+                <div class="steps__inner">
+                  <div class="row">
+                    <h2 class="offset-lg-3 offset-md-2 col-lg-9 col-md-10">Как мы работаем?</h2>
+                    <p class="par offset-lg-3 offset-md-2 col-lg-6 col-md-8">Качественно, с&nbsp;предоставлением гарантий, храним коммерческую тайну, страхуем каждую сделку.</p>
+                  </div>
+                  <div class="steps__cards">
+
+                    <div class="steps__card-item">
+                      <img src="./images/icons/step-icon-1.svg" alt="key visual icon">
+                      <h3 class="vertical">Заявка</h3>
+                      <p>Оставьте заявку у&nbsp;нас на&nbsp;сайте или закажите звонок. Мы&nbsp;перезвоним Вам для уточнения всех деталей.</p>
+                    </div>
+
+                    <div class="steps__card-item">
+                      <img src="./images/icons/step-icon-2.svg" alt="key visual icon">
+                      <h3 class="vertical">Оценка</h3>
+                      <p>Мы&nbsp;выезжаем на&nbsp;вашу квартиру и&nbsp;оцениваем ее&nbsp;по&nbsp;рынку, консультируем и&nbsp;проверяем документы при встрече.</p>
+                    </div>
+
+                    <div class="steps__card-item">
+                      <img src="./images/icons/step-icon-3.svg" alt="key visual icon">
+                      <h3 class="vertical">Продвижение</h3>
+                      <p>Наш маркетинговый подход позволяет закрыть сделку в&nbsp;кратчайшие сроки.</p>
+                    </div>
+
+                    <div class="steps__card-item">
+                      <img src="./images/icons/step-icon-4.svg" alt="key visual icon">
+                      <h3 class="vertical">Сделка</h3>
+                      <p>Вы&nbsp;свободно изучаете все документы и&nbsp;заключаем договор купли-продажи у&nbsp;нотариуса или регистратора.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <section class="careers">
+              <div class="container-fluid" id="careers">
+                <div class="careers__inner container">
+                  <div class="row offset-md-1">
+                    <div class="col-sm-12 col-lg-9">
+                      <h3>Карьера у нас</h3>
+                      <h2>Добро пожаловать в&nbsp;наше агентство недвижимости!
+                        У&nbsp;нас открыты возможности для развития карьеры
+                        и&nbsp;достижения профессиональных успехов.</h2>
+                    </div>
+                  </div>
+                  <div class="row offset-md-1">
+                    <div class="col-sm-12 col-md-6">
+                      <p>Мы&nbsp;приглашаем вам присоединиться к&nbsp;нашей команде в&nbsp;качестве Агента по&nbsp;операциям с&nbsp;недвижимостью или Риэлтора.</p>
+                      <p>В&nbsp;нашем агентстве вы&nbsp;будете заниматься проведением сделок с&nbsp;недвижимостью, включая поиск и&nbsp;предложение подходящих объектов недвижимости клиентам, проведение показов, ведение переговоров и&nbsp;оформление сделок.</p>
+                      <p>Мы&nbsp;ищем профессионалов, которые обладают знаниями в&nbsp;области недвижимости, имеют хорошие навыки коммуникации и&nbsp;умеют эффективно работать с&nbsp;клиентами.</p>
+                    </div>
+                  </div>
+
+                  <div class="row careers__contacts">
+                    <div class="offset-md-7 col-md-5">
+                      <img class="careers__contacts--icon" src="./images/icons/icon-4.svg" alt="key visual icon">
+                      <p class="careers__contacts--text">Если вы&nbsp;хотите присоединиться к&nbsp;нашей команде, свяжитесь с&nbsp;нами прямо сейчас, и&nbsp;мы&nbsp;расскажем вам больше о&nbsp;возможностях, которые мы&nbsp;предлагаем для вашего развития и&nbsp;успеха в&nbsp;этой динамичной области.</p>
+                      <h3>Контакты</h3>
+                      <p>
+                        Отдел кадров<br>
+                        <a href="tel:+375447903518">+375 (44) 790-35-18</a>
+                      </p>
+                      <p>
+                        Присылайте свое резюме<br>
+                        нам в телеграм: <a href="">@haus_estate</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <section class="contact-form">
+              <div class="container-fluid" id="contact--form">
+                <div class="contact-form__inner row">
+                  <div class="contact-form__image col-md-5 col-sm-12"></div>
+                  <div class="contact-form__form offset-md-1 col-md-6 col-sm-12">
+                    <h2>Свяжитесь с нами</h2>
+                    <p>Оставьте ваши данные, чтобы получить бесплатную консультацию</p>
+                    <form id="contact-form">
+                      <div class="form-field">
+                        <label class="sr-only" for="service">Выберите услугу</label>
+                        <div class="select">
+                          <select name="service" id="service" required>
+                            <option value="" selected disabled>Выберите услугу</option>
+                            <option value="rent-out-apt">Сдать квартиру</option>
+                            <option value="rent-apt">Снять квартиру</option>
+                            <option value="sel-apt">Продать квартиру</option>
+                            <option value="buy-apt">Купить квартиру</option>
+                            <option value="consultation">Консультация</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-field">
+                          <label for="name">Ваше имя</label>
+                          <input type="text" id="name" name="name" placeholder="Ваше имя" minlength="2" required>
+                      </div>
+                      <div class="form-field">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                      </div>
+
+                      <div class="form-field">
+                        <p>Предпочтительный способ связи</p>
+                        <div class="row ml-0">
+                          <label for="radio-phone">
+                            <input type="radio" id="radio-phone" name="radio" value="Phone" checked required>
+                            <span>Телефон</span>
+                          </label>
+                          <label for="radio-telegram">
+                            <input type="radio" id="radio-telegram" name="radio" value="Telegram">
+                            <span>Telegram</span>
+                          </label>
+                          <label for="radio-viber">
+                            <input type="radio" id="radio-viber" name="radio" value="Viber">
+                            <span>Viber</span>
+                          </label>
+                          <label for="radio-whatsapp">
+                            <input type="radio" id="radio-whatsapp" name="radio" value="WhatsApp">
+                            <span>WhatsApp</span>
+                          </label>
+                        </div>  
+                      </div>
+                      
+                      <div class="form-field form-field--textarea">
+                        <label class="sr-only" for="message">Задайте свой вопрос</label>
+                        <textarea id="message" name="message" placeholder="Задайте свой вопрос" rows="4"></textarea>
+                      </div>
+                      <button class="btn btn-arrow" type="submit">Отправить</button>
+                    </form>
+                  </div>
+                </div>
+                  
+              </div>
+            </section>
+            
+
+            <section class="contacts" id="contacts">
+              <div class="container">
+                <div class="contacts__inner row align-items-center">
+                  <div class="contacts__text offset-md-1 col-md-3">
+                    <h2>Контакты</h2>
+                    <address>
+                      <h3>Наш офис</h3>
+                      <a href="https://goo.gl/maps/VLHtpyaEMRhxxS9e8">Минск, улица Шорная 20, офис 6Н</a>
+                      <h3>Телефон</h3>
+                      <a href="tel:+375447903518">Viber/Telegram/Whatsapp:<br>+375 (44) 790-35-18</a>
+                    </address>
+                  </div>
+                  <div class="contacts__image offset-md-1 col-md-6">
+                    <img src="./images/location.png" alt="location">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="footer__inner container">
+                  <div class="row">
+
+                    <div>
+                      <a href="#"><img class="logo-img" src="./images/logo-haus-black.png" alt="logo"></a>
+                    </div>
+
+                    <div class="nav-col-1">
+                      <p>Найдите нас на <a href="https://www.figma.com/exit?url=https%3A%2F%2Frealt.by%2F" target="_blank">Realt.by</a>:</p>
+                      <ul>
+                        <li>
+                          <p class="nav__title">Аренда</p>
+                          <ul>
+                            <li><a href="#" target="_blank">Квартиры</a></li>
+                            <li><a href="#" target="_blank">Дома и коттеджи</a></li>
+                            <li><a href="#" target="_blank">Участки</a></li>
+                            <li><a href="#" target="_blank">Коммерческая</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="nav__title">Продажа</p>
+                          <ul>
+                            <li><a href="#" target="_blank">Квартиры</a></li>
+                            <li><a href="#" target="_blank">Дома и коттеджи</a></li>
+                          </ul>
+                        </li>
+                      </ul> 
+                    </div>
+  
+                    <nav class="nav-col-2">
+                      <ul>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#careers">Карьера в Haus</a></li>
+                        <li><a href="#about">О Нас</a></li>
+                        <li><a href="#steps">Как мы работаем</a></li>
+                      </ul>
+                    </nav>
+  
+                    <div class="nav-col-3">
+                      <ul>
+                        <li><a href="#" target="_blank">Пользовательское соглашение</a></li>
+                        <li><a href="#" target="_blank">Политика обработки персональных данных</a></li>
+                      </ul>
+                    </div>
+
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="container-fluid footer__copy">
+              <div class="container">
+                <span>© 2023 ООО "Хаус Эстейт"</span>
+                <br>
+                <span>Использование сайта означает согласие с <a href="" target="_blank">Пользовательским соглашением</a> и <a href="" target="_blank">Политикой обработки персональных данных</a></span>
+              </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
