@@ -938,7 +938,7 @@ footer .row div, footer .row nav {
 footer .row div p, footer .row nav p {
   width: max-content;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   footer .row {
     gap: 20px;
   }
