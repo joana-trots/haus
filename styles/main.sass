@@ -447,7 +447,7 @@ form
         padding: 130px 12px
         position: relative
         @include media("<=phone")
-            padding: 24px 12px
+            padding: 65px 12px
     h2
         margin-top: 26px
     p
@@ -496,6 +496,8 @@ form
     padding-top: 213px
     @include media("<=tablet")
         padding-top: 130px
+    @include media("<=phone")
+        padding-top: 65px
     &__inner
         background: $white
         @include media("<=tablet")
@@ -607,6 +609,8 @@ form
     address
         margin-top: 48px
         max-width: 210px
+        @include media("<=phone")
+            margin-bottom: 24px
     h3
         border-top: 2px solid $black
         padding-top: 10px
@@ -650,6 +654,12 @@ footer
             max-width: 210px
             p
                 width: max-content
+        @include media("<=phone")
+            gap: 20px
+            div:first-child
+                display: none
+            div, nav
+                max-width: 100%
     [class^="nav-col"]
         &::before
             content: ''

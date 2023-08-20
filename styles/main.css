@@ -657,7 +657,7 @@ form textarea {
 }
 @media (max-width: 576px) {
   .careers__inner {
-    padding: 24px 12px;
+    padding: 65px 12px;
   }
 }
 .careers h2 {
@@ -729,6 +729,11 @@ form textarea {
 @media (max-width: 768px) {
   .contact-form {
     padding-top: 130px;
+  }
+}
+@media (max-width: 576px) {
+  .contact-form {
+    padding-top: 65px;
   }
 }
 .contact-form__inner {
@@ -868,6 +873,11 @@ form textarea {
   margin-top: 48px;
   max-width: 210px;
 }
+@media (max-width: 576px) {
+  .contacts address {
+    margin-bottom: 24px;
+  }
+}
 .contacts h3 {
   border-top: 2px solid #071013;
   padding-top: 10px;
@@ -927,6 +937,17 @@ footer .row div, footer .row nav {
 }
 footer .row div p, footer .row nav p {
   width: max-content;
+}
+@media (max-width: 576px) {
+  footer .row {
+    gap: 20px;
+  }
+  footer .row div:first-child {
+    display: none;
+  }
+  footer .row div, footer .row nav {
+    max-width: 100%;
+  }
 }
 footer [class^=nav-col]::before {
   content: "";
