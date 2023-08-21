@@ -76,7 +76,7 @@ p
         border-color: $black
         background: $white
         color: $black
-    &.btn-arrow
+    &-arrow
         &::after
             content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34' fill='none'%3E%3Cpath d='M25.5 17.0002L25.8536 16.6466L26.2071 17.0002L25.8536 17.3537L25.5 17.0002ZM8.5 17.5002C8.22386 17.5002 8 17.2763 8 17.0002C8 16.724 8.22386 16.5002 8.5 16.5002V17.5002ZM20.1869 10.9799L25.8536 16.6466L25.1464 17.3537L19.4798 11.687L20.1869 10.9799ZM25.8536 17.3537L20.1869 23.0204L19.4798 22.3133L25.1464 16.6466L25.8536 17.3537ZM25.5 17.5002H8.5V16.5002H25.5V17.5002Z' fill='%23FCFCFC'/%3E%3C/svg%3E")
             display: block
@@ -84,20 +84,22 @@ p
             width: 34px
         &:hover::after
             content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34' fill='none'%3E%3Cpath d='M25.5 17.0002L25.8536 16.6466L26.2071 17.0002L25.8536 17.3537L25.5 17.0002ZM8.5 17.5002C8.22386 17.5002 8 17.2763 8 17.0002C8 16.724 8.22386 16.5002 8.5 16.5002V17.5002ZM20.1869 10.9799L25.8536 16.6466L25.1464 17.3537L19.4798 11.687L20.1869 10.9799ZM25.8536 17.3537L20.1869 23.0204L19.4798 22.3133L25.1464 16.6466L25.8536 17.3537ZM25.5 17.5002H8.5V16.5002H25.5V17.5002Z' fill='%23071013'/%3E%3C/svg%3E")
-    &.btn-round
+    &-round
         border-radius: 100%
         padding: 0
         height: 40px
         width: 40px
+    &-cta
+        margin-top: 24px
+    &-disable
+        pointer-events: none
     @include media("<=tablet")
         font-size: 14px
-    &.btn-cta
-        margin-top: 24px    
+
 section
     padding: 130px 0 0
     @include media("<=phone")
         padding: 65px 0 0
-
 
 .logo-img
     height: 65px
@@ -187,14 +189,14 @@ form
             content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='9' viewBox='0 0 13 9' fill='none'%3E%3Cpath d='M12.6464 1.32321L6.64642 7.32321L0.646423 1.32321' stroke='%239B9B9B'/%3E%3C/svg%3E")
             justify-self: end
             position: relative
-            z-index: -1
+            z-index: 0
         select
             appearance: none
             outline: none
             border: none
             color: $black
             position: relative
-            z-index: 0
+            z-index: 1
             cursor: pointer
             background: transparent
             &:invalid
@@ -654,7 +656,9 @@ footer
             max-width: 210px
             p
                 width: max-content
-        @include media("<=tablet")
+        div:last-child
+            font-size: 12px
+        @include media("<=desktop")
             gap: 20px
             div:first-child
                 display: none
@@ -679,3 +683,5 @@ footer
     a:hover
         text-decoration: underline
         color: $gray
+.modal-body h2
+    text-align: center

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./js/emailjs.js"></script>
+    <script src="./js/modal.js"></script>
 </head>
 
 <body>
@@ -62,7 +63,7 @@
             <section class="hero">
                  <div class="container">
                     <div class="hero__info row">
-                        <div class="hero__subnav col-lg-4 col-sm-12">
+                        <div class="hero__subnav col-lg-4 col-sm-12" data-bs-toggle="modal" data-bs-target="#specialModal">
                             <p class="hero__subnav--title">Спецпредложение</p>
                             <p class="hero__subnav--link">
                                 <a href="#" title="Специальное предложение">До конца июля реклама для собственников за счет фирмы</a>
@@ -350,7 +351,7 @@
                       </p>
                       <p>
                         Присылайте свое резюме<br>
-                        нам в телеграм: <a href="">@haus_estate</a>
+                        нам в телеграм: <a href="https://t.me/haus_estate" target="_blank">@haus_estate</a>
                       </p>
                     </div>
                   </div>
@@ -444,6 +445,22 @@
               </div>
             </section>
 
+            <!-- Modal -->
+            <div class="modal fade" id="specialModal" tabindex="-1" aria-labelledby="specialModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>До&nbsp;конца сентября реклама вашей квартиры в&nbsp;аренду и&nbsp;полное сопровождение бесплатно!</h2>
+                  </div>
+                  <div class="modal-footer m-auto">
+                    <a href="#contact--form"><button class="btn" data-bs-dismiss="modal">Получить консультацию</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
         </main>
         <footer class="footer">
             <div class="container-fluid">
@@ -489,6 +506,10 @@
                       <ul>
                         <li><a href="#" target="_blank">Пользовательское соглашение</a></li>
                         <li><a href="#" target="_blank">Политика обработки персональных данных</a></li>
+
+                        <li><a href="https://1drv.ms/b/s!Ajr3NFWOVQVlggjijMfWfy-feRlT" target="_blank">Постановление №386 от 14 марта 2008 г.</a></li>
+                        <li><a href="https://1drv.ms/b/s!Ajr3NFWOVQVlgglIta_xWvRkr3BG" target="_blank">Указ №15 от 9 января 2006 г.</a></li>
+                        <li><a href="https://1drv.ms/b/s!Ajr3NFWOVQVlggrc1N6VNXK_2djQ" target="_blank">Постановление №42 от 1 июня 2009 г.</a></li>
                       </ul>
                     </div>
 
