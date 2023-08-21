@@ -1,4 +1,3 @@
-
 (function(){
     emailjs.init("uEvqLwIMS_CzlJXGA");
 })();
@@ -7,19 +6,17 @@ window.onload = function() {
         event.preventDefault();
         emailjs.sendForm('service_j46beqb', 'template_sdh5mcq', this)
             .then(function() {
-                alert('We will contact you shortly');
+                alert('Все готово! Специалист свяжется с вами в течении 30 минут');
             }, function(error) {
                 console.log('FAILED...', error);
             });
     });
-}
 
-window.onload = function() {
     document.getElementById('hero-form').addEventListener('submit', function(event) {
         event.preventDefault();
         emailjs.sendForm('service_j46beqb', 'template_sdh5mcq', this)
             .then(function() {
-                alert('We will contact you shortly');
+                alert('Все готово! Специалист свяжется с вами в течении 30 минут');
             }, function(error) {
                 console.log('FAILED...', error);
             });
