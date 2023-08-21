@@ -944,6 +944,9 @@ footer .row div p, footer .row nav p {
 footer .row div:last-child {
   font-size: 12px;
 }
+footer .row div:last-child ul {
+  gap: 12px;
+}
 @media (max-width: 992px) {
   footer .row {
     gap: 20px;
