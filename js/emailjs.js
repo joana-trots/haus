@@ -1,10 +1,10 @@
 (function(){
-    emailjs.init("uEvqLwIMS_CzlJXGA");
+    emailjs.init("LU17B-rAdOWrUy1zv");
 })();
 window.onload = function() {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        emailjs.sendForm('service_j46beqb', 'template_sdh5mcq', this)
+        emailjs.sendForm('haus.estate', 'template_mkyq818', this)
             .then(function() {
                 alert('Все готово! Специалист свяжется с вами в течении 30 минут');
             }, function(error) {
@@ -14,7 +14,7 @@ window.onload = function() {
 
     document.getElementById('hero-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        emailjs.sendForm('service_j46beqb', 'template_sdh5mcq', this)
+        emailjs.sendForm('haus.estate', 'template_mkyq818', this)
             .then(function() {
                 alert('Все готово! Специалист свяжется с вами в течении 30 минут');
             }, function(error) {
