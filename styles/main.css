@@ -145,28 +145,31 @@ p {
   background: #FCFCFC;
   color: #071013;
 }
-.btn.btn-arrow::after {
+.btn-arrow::after {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34' fill='none'%3E%3Cpath d='M25.5 17.0002L25.8536 16.6466L26.2071 17.0002L25.8536 17.3537L25.5 17.0002ZM8.5 17.5002C8.22386 17.5002 8 17.2763 8 17.0002C8 16.724 8.22386 16.5002 8.5 16.5002V17.5002ZM20.1869 10.9799L25.8536 16.6466L25.1464 17.3537L19.4798 11.687L20.1869 10.9799ZM25.8536 17.3537L20.1869 23.0204L19.4798 22.3133L25.1464 16.6466L25.8536 17.3537ZM25.5 17.5002H8.5V16.5002H25.5V17.5002Z' fill='%23FCFCFC'/%3E%3C/svg%3E");
   display: block;
   height: 34px;
   width: 34px;
 }
-.btn.btn-arrow:hover::after {
+.btn-arrow:hover::after {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34' fill='none'%3E%3Cpath d='M25.5 17.0002L25.8536 16.6466L26.2071 17.0002L25.8536 17.3537L25.5 17.0002ZM8.5 17.5002C8.22386 17.5002 8 17.2763 8 17.0002C8 16.724 8.22386 16.5002 8.5 16.5002V17.5002ZM20.1869 10.9799L25.8536 16.6466L25.1464 17.3537L19.4798 11.687L20.1869 10.9799ZM25.8536 17.3537L20.1869 23.0204L19.4798 22.3133L25.1464 16.6466L25.8536 17.3537ZM25.5 17.5002H8.5V16.5002H25.5V17.5002Z' fill='%23071013'/%3E%3C/svg%3E");
 }
-.btn.btn-round {
+.btn-round {
   border-radius: 100%;
   padding: 0;
   height: 40px;
   width: 40px;
 }
+.btn-cta {
+  margin-top: 24px;
+}
+.btn-disable {
+  pointer-events: none;
+}
 @media (max-width: 768px) {
   .btn {
     font-size: 14px;
   }
-}
-.btn.btn-cta {
-  margin-top: 24px;
 }
 
 section {
@@ -291,7 +294,7 @@ form .select::after {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='9' viewBox='0 0 13 9' fill='none'%3E%3Cpath d='M12.6464 1.32321L6.64642 7.32321L0.646423 1.32321' stroke='%239B9B9B'/%3E%3C/svg%3E");
   justify-self: end;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 form .select select {
   appearance: none;
@@ -299,7 +302,7 @@ form .select select {
   border: none;
   color: #071013;
   position: relative;
-  z-index: 0;
+  z-index: 1;
   cursor: pointer;
   background: transparent;
 }
@@ -461,12 +464,12 @@ form textarea {
 }
 @media (max-width: 576px) {
   .carousel-control-next,
-.carousel-control-prev {
+  .carousel-control-prev {
     width: 32px;
     height: 32px;
   }
   .carousel-control-next-icon,
-.carousel-control-prev-icon {
+  .carousel-control-prev-icon {
     width: 18px;
     height: 18px;
   }
@@ -933,12 +936,23 @@ footer .row {
 }
 footer .row div, footer .row nav {
   width: fit-content;
-  max-width: 210px;
+  max-width: 280px;
 }
 footer .row div p, footer .row nav p {
   width: max-content;
 }
-@media (max-width: 768px) {
+footer .row div:last-child {
+  font-size: 12px;
+}
+footer .row div:last-child ul {
+  gap: 12px;
+}
+@media (max-width: 1200px) {
+  footer .row {
+    gap: 50px;
+  }
+}
+@media (max-width: 992px) {
   footer .row {
     gap: 20px;
   }
@@ -967,9 +981,25 @@ footer li {
 footer .nav__title {
   font-weight: 700;
 }
+footer .nav__socials {
+  gap: 9px;
+}
+footer .nav__socials:hover .nav__social-icon {
+  opacity: 1;
+}
+footer .nav__social-icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+  opacity: 0.7;
+}
 footer a:hover {
   text-decoration: underline;
   color: #9B9B9B;
+}
+
+.modal-body h2 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
