@@ -653,13 +653,15 @@ footer
         column-gap: 90px
         div, nav
             width: fit-content
-            max-width: 210px
+            max-width: 280px
             p
                 width: max-content
         div:last-child
             font-size: 12px
             ul
                 gap: 12px
+        @include media("<=1200px")
+            gap: 50px
         @include media("<=desktop")
             gap: 20px
             div:first-child
@@ -682,6 +684,17 @@ footer
         color: $secondary-gray
     .nav__title
         font-weight: 700
+    .nav__socials
+        gap: 9px
+        &:hover .nav__social-icon
+            opacity: 1
+    .nav__social-icon
+        height: 24px
+        width: 24px
+        margin-right: 8px
+        opacity: .7
+    
+            
     a:hover
         text-decoration: underline
         color: $gray
