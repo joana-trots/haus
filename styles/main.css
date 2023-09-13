@@ -197,7 +197,7 @@ section {
 .header .nav-link:hover {
   color: #9B9B9B;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .header .nav-link {
     font-size: 20px;
     line-height: 2;
@@ -858,7 +858,7 @@ form textarea {
   display: none;
 }
 .contacts p {
-  margin: 18px 0;
+  margin: 18px 0 9px;
 }
 .contacts a {
   display: block;
