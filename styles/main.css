@@ -464,12 +464,12 @@ form textarea {
 }
 @media (max-width: 576px) {
   .carousel-control-next,
-  .carousel-control-prev {
+.carousel-control-prev {
     width: 32px;
     height: 32px;
   }
   .carousel-control-next-icon,
-  .carousel-control-prev-icon {
+.carousel-control-prev-icon {
     width: 18px;
     height: 18px;
   }
@@ -808,6 +808,27 @@ form textarea {
 }
 .contact-form .form-field .ml-0 {
   margin-left: 0;
+}
+.contact-form .form-field--submit-button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.contact-form .form-field--submit-button button:hover + span {
+  color: #071013;
+}
+.contact-form .form-field--submit-button span {
+  order: 1;
+  font-size: 12px;
+  color: #9B9B9B;
+  transition: none;
+}
+.contact-form .form-field--submit-button a {
+  text-decoration: underline;
+  transition: none;
+}
+.contact-form .form-field--submit-button a:hover {
+  color: #071013;
 }
 .contact-form label:not([for=message]) {
   visibility: visible;
